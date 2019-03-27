@@ -8,4 +8,13 @@
         <item name="colorControlNormal">#232C0044</item>
         <item name="colorControlActivated">@color/colorText</item>
     </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">9dp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10dp</item>
+    </style>
+
 </resources>
