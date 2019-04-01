@@ -1,5 +1,5 @@
 <resources>
-<<<<<<< HEAD
+    <<<<<<< HEAD
     <string name="app_name">When and Where</string>
     <string name="text_accounts">All Accounts</string>
     <string name="hint_name">Name</string>
@@ -28,7 +28,7 @@
     <string name="text_map">Map</string>
     <string name="text_time">Time</string>
 =======
-    <string name="app_name">WhenWhere</string>
+
     <string name="calendar">calendar</string>
     <string name="activity">activity</string>
     <string name="me">me</string>
