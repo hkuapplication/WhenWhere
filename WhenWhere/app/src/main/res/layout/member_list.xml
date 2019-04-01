@@ -15,7 +15,7 @@
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_title"
+            android:text="@string/title_member_list"
             android:textSize="20sp"
             tools:text="Member List" />
 
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/text_hello" />
+            android:text="@string/hi" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewName"
@@ -39,9 +39,10 @@
         android:paddingLeft="16dp"
         android:paddingTop="5dp"
         android:paddingRight="20dp"
-        android:text="@string/text_accounts"
+        android:text="@string/all_accounts"
         android:textColor="@android:color/black"
-        android:paddingStart="16dp" />
+        android:paddingStart="16dp"
+        android:paddingEnd="20dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewUsers"

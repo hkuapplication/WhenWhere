@@ -33,7 +33,29 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="79dp"
+                    android:layout_height="49dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/act_list_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/act_list_name"
+                        tools:text="Name" />
+
+                    <TextView
+                        android:id="@+id/get_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/act_list_get_name"
+                        tools:text="Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:orientation="horizontal">
 
                     <TextView
