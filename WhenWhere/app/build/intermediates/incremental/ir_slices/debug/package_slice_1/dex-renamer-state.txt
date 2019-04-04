@@ -1,4 +1,0 @@
-#Thu Apr 04 15:18:01 CST 2019
-base.0=C\:\\Users\\Dell\\WhenWhere\\WhenWhere\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-path.0=classes.dex
-renamed.0=classes.dex
