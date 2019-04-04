@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/text_me"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="79dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="37dp"
+        tools:srcCompat="@tools:sample/avatars[12]" />
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="43dp"
+        android:text="Amy" />
+
+    <TextView
+        android:id="@+id/accountNumber"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/Username"
+        android:layout_alignBottom="@+id/imageView"
+        android:text="55***533" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="140dp"
+        android:clickable="true"
+        android:text="History Activities" />
+
+    <Button
+        android:id="@+id/settings"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="216dp"
+        android:clickable="true"
+        android:text="Settings" />
+</RelativeLayout>
