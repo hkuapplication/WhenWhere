@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import cs.hku.hk.whenwhere.R;
 
+
 public class ActivityFragment extends Fragment {
 
     @Nullable
@@ -17,4 +18,5 @@ public class ActivityFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_list,null);
     }
+
 }
