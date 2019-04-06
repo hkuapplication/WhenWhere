@@ -59,9 +59,9 @@ public class TimeFragment extends Fragment {
         listTimes.add(ac1);
         Times ac2=new Times();
         ac2.setId(3);
-        ac1.setDate("2019-01-09");
-        ac1.setTime("6:00");
-        ac1.setMember("frank, kiki");
+        ac2.setDate("2019-01-09");
+        ac2.setTime("6:00");
+        ac2.setMember("frank, kiki");
         listTimes.add(ac2);
     }
 }

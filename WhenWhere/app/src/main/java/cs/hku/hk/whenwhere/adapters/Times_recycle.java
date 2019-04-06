@@ -22,7 +22,7 @@ public class Times_recycle extends RecyclerView.Adapter<Times_recycle.UserViewHo
     public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // inflating recycler item view
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_recycle, parent, false);
+                .inflate(R.layout.item_time_recycle, parent, false);
 
         return new UserViewHolder(itemView);
     }
