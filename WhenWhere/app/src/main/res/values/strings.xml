@@ -34,7 +34,7 @@
     <string name="activity_session">activity_session</string>
     <string name="discussion_session">discussion_session</string>
     <string name="my_activity">my activity</string>
-    <string name="name">Name</string>
+    <string name="name">Name:</string>
     <string name="start_date">2019-04-01</string>
     <string name="end_date">2019-04-03</string>
     <string name="activity_session_input">60min</string>
@@ -58,4 +58,6 @@
     <string name="hi">hi</string>
     <string name="act_list_get_name">act_list_get_name</string>
     <string name="act_list_name">act_list_name</string>
+    <string name="text_date">text_date</string>
+    <string name="email">Email:</string>
 </resources>

@@ -27,17 +27,17 @@ public class MemberFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.member_list,null);
+        View view= inflater.inflate(R.layout.member_list,null);
         //getSupportActionBar().setTitle("");
-        //initViews();
-       // initObjects();
+        recyclerView = view.findViewById(R.id.recyclerViewUsers);
+        initObjects();
+        return view;
     }
-/*
     private void initObjects() {
         listMembers = new ArrayList<>();
         member_recycle = new Member_recycle(listMembers);
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
@@ -51,11 +51,12 @@ public class MemberFragment extends Fragment {
     }
 
     private void getDataFromMYSQL() {
+      //fake data
+      Member ac1=new Member();
+      ac1.setId(2);
+      ac1.setName("dinner");
+      ac1.setEmail("abc@gmail.com");
+      listMembers.add(ac1);
     }
-
-    private void initViews() {
-        recyclerView = findViewById(R.id.recyclerViewUsers);
-    }
-    */
 
 }

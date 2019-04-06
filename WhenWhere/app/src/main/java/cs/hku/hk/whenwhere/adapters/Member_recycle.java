@@ -29,7 +29,7 @@ public class Member_recycle extends RecyclerView.Adapter<Member_recycle.UserView
     @Override
     public void onBindViewHolder(Member_recycle.UserViewHolder holder, int position) {
         holder.textViewName.setText(listMembers.get(position).getName());
-       // holder.textViewTime.setText(listActivities.get(position).getTime());
+        holder.textViewEmail.setText(listMembers.get(position).getEmail());
        // holder.textViewPlace.setText(listActivities.get(position).getPlace());
     }
     @Override
@@ -41,13 +41,13 @@ public class Member_recycle extends RecyclerView.Adapter<Member_recycle.UserView
     public class UserViewHolder extends RecyclerView.ViewHolder {
 
         public TextView textViewName;
-      //  public TextView textViewTime;
+        public TextView textViewEmail;
       //  public TextView textViewPlace;
 
         public UserViewHolder(View view) {
             super(view);
             textViewName = view.findViewById(R.id.get_name);
-        //    textViewTime = view.findViewById(R.id.get_time);
+            textViewEmail = view.findViewById(R.id.get_email);
         //    textViewPlace = view.findViewById(R.id.get_place);
         }
     }
