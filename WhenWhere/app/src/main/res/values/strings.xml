@@ -60,4 +60,5 @@
     <string name="act_list_name">act_list_name</string>
     <string name="text_date">text_date</string>
     <string name="email">Email:</string>
+    <string name="c_events">c_events</string>
 </resources>
