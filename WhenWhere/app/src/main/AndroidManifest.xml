@@ -9,13 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".utils.OuterNavigationController">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.HistoryActivity" />
+        <activity
+            android:name=".activities.DetailedHistory"
+            android:parentActivityName=".activities.HistoryActivity" />
+        <activity android:name=".activities.ListActivity" />
+        <activity
+            android:name=".activities.CreateActivity"
+            android:parentActivityName=".activities.ListActivity" />
+        <activity
+            android:name=".activities.AddMemberActivity" />
+        <activity android:name=".activities.AddEventActivity" />
+        <activity android:name=".activities.WeeklyActivity"></activity>
     </application>
 
 </manifest>
