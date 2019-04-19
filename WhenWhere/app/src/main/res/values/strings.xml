@@ -61,4 +61,9 @@
     <string name="text_date">text_date</string>
     <string name="email">Email:</string>
     <string name="c_events">c_events</string>
+    <string name="title_Markers">Markers</string>
+    <string name="marker_title_taroko">太魯閣國家公園</string>
+    <string name="marker_title_yushan">玉山國家公園</string>
+    <string name="marker_title_kenting">墾丁國家公園</string>
+    <string name="marker_title_yangmingshan">陽明山國家公園</string>
 </resources>
