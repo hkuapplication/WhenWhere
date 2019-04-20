@@ -32,13 +32,11 @@
             android:layout_marginBottom="0dp"
             android:orientation="horizontal">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewUsers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="wrap_content"
-            android:layout_height="110dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="72dp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
