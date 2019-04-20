@@ -1,5 +1,6 @@
 package cs.hku.hk.whenwhere.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import cs.hku.hk.whenwhere.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,40 +24,31 @@ import cs.hku.hk.whenwhere.model.Activities;
 import cs.hku.hk.whenwhere.model.Events;
 
 public class CalendarFragment extends Fragment {
-    private RecyclerView recyclerView;
-    private List<Events> listEvents;
-    private Events_recycle events_recycle;
+    Button addButton;
+    Button weekly;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.calender_activity, container, false);
-        recyclerView = view.findViewById(R.id.recyclerViewUsers);
-        initObjects();
+       View view = inflater.inflate(R.layout.outer_fragment_calendar,null);
+        addButton = (Button)view.findViewById(R.id.addEvent);
+        weekly = (Button)view.findViewById(R.id.weekly);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getActivity(),AddEventActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        weekly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getActivity(),WeeklyActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
-    }
-    private void initObjects() {
-        listEvents = new ArrayList<>();
-        events_recycle = new Events_recycle(listEvents);
-
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(events_recycle);
-        //databaseHelper = new DatabaseHelper(activity);
-
-        //String emailFromIntent = getIntent().getStringExtra("EMAIL");
-        // textViewName.setText(emailFromIntent);
-
-        getDataFromMYSQL();
-    }
-
-    private void getDataFromMYSQL() {
-        //fake data
-        Events ac1=new Events();
-        ac1.setId(2);
-        ac1.setDiscription("dinner");
-        listEvents.add(ac1);
 
     }
 }

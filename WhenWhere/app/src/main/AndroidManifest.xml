@@ -37,6 +37,18 @@
         </activity>
         <activity android:name =".utils.OuterNavigationController"></activity>
         <activity android:name=".activities.Register"></activity>
+        <activity android:name=".activities.HistoryActivity" />
+        <activity
+            android:name=".activities.DetailedHistory"
+            android:parentActivityName=".activities.HistoryActivity" />
+        <activity android:name=".activities.ListActivity" />
+        <activity
+            android:name=".activities.CreateActivity"
+            android:parentActivityName=".activities.ListActivity" />
+        <activity
+            android:name=".activities.AddMemberActivity" />
+        <activity android:name=".activities.AddEventActivity" />
+        <activity android:name=".activities.WeeklyActivity"></activity>
     </application>
 
 </manifest>

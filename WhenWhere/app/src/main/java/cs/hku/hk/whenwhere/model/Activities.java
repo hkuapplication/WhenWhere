@@ -5,6 +5,13 @@ public class Activities {
     private String name;
     private String place;
     private String time;
+    
+    public Activities(int id, String name, String place, String time){
+        this.id=id;
+        this.name=name;
+        this.place=place;
+        this.time=time;
+    }
 
     public int getId() {
         return id;
