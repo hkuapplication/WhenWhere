@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Login">
+        <activity android:name=".activities.Login"></activity>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
         <meta-data
@@ -28,15 +28,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBvj2EWonRPjRWOJfJYDRfb0EVwGux-Fms" />
 
-        <activity android:name=".activities.CreateActivity">
+        <activity android:name=".activities.map">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name =".utils.OuterNavigationController"/>
-        <activity android:name=".activities.Register"/>
+        <activity android:name =".utils.OuterNavigationController"></activity>
+        <activity android:name=".activities.Register"></activity>
     </application>
 
 </manifest>
