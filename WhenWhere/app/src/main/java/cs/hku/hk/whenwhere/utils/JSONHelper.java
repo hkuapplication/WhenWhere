@@ -34,7 +34,7 @@ public class JSONHelper {
             char[] html = HTMLSource.toCharArray();
             int HTMLEnd=HTML_BUFFER_SIZE;
             for(int i=0;i<HTML_BUFFER_SIZE;i++){
-                System.out.println(html[i]);
+                //System.out.print(html[i]);
                 if(html[i]=='}'){ //ASCII '}'
                     HTMLEnd=i+1;
                     break;

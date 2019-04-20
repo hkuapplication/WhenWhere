@@ -74,8 +74,8 @@ public class Login extends AppCompatActivity {
         }
         else{
             final String url = "https://i.cs.hku.hk/~hdqi/WhenWhere/user/login.php" //TODO
-                    + (email.isEmpty() ? "" : "?action=login&email="
-                    + android.net.Uri.encode(email, "UTF-8"))
+                    + "?action=login&email="
+                    + android.net.Uri.encode(email, "UTF-8")
                     + "&password="
                     + android.net.Uri.encode(password, "UTF-8");
             AsyncTask<String, Void, String> task = new AsyncTask<String,
@@ -90,8 +90,9 @@ public class Login extends AppCompatActivity {
 //                pdialog.show();
                     jsonString = jsonHelper.getJsonPage(url);
                     System.out.println("网站页面JSON信息："+jsonString);
-                    if (jsonString.equals("Fail to login"))
+                    if (jsonString.startsWith("fail")){
                         success = false;
+                    }
                     return null;
                 }
                 @Override
@@ -99,7 +100,7 @@ public class Login extends AppCompatActivity {
                     if (success) {
                         parse_JSON_String_and_Switch_Activity(jsonString);
                     } else {
-                        alert( "Error", "Fail to connect" );
+                        alert( "Error", "Invalid email or password." );
                     }
 //                pdialog.hide();
                 }
