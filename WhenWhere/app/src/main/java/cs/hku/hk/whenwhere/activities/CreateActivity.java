@@ -1,6 +1,5 @@
 package cs.hku.hk.whenwhere.activities;
 
-<<<<<<< HEAD
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -24,18 +23,12 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
     private int dtime,atime;
     private Button confirm;
     TextView startDate, endDate, aTime, dTime;
-=======
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import cs.hku.hk.whenwhere.R;
-public class CreateActivity extends AppCompatActivity {
 
->>>>>>> BranchXWW
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_activity);
-<<<<<<< HEAD
+
         startDate=(TextView)findViewById(R.id.startDate);
         endDate=findViewById(R.id.endDate);
         aTime=findViewById(R.id.activitysession);
@@ -124,7 +117,6 @@ public class CreateActivity extends AppCompatActivity {
             Intent intent=new Intent(CreateActivity.this, OuterNavigationController.class);
             startActivity(intent);
         }
-=======
->>>>>>> BranchXWW
+
     }
 }

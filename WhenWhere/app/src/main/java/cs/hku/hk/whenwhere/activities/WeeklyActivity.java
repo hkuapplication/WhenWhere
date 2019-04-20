@@ -10,11 +10,11 @@ public class WeeklyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calender_activity);
+        setContentView(R.layout.calendar_activity);
 // set a back arrow in the weekly calendar page
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Weekly Schedule");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Weekly Schedule");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

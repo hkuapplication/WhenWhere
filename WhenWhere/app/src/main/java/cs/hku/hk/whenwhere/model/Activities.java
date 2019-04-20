@@ -5,7 +5,11 @@ public class Activities {
     private String name;
     private String place;
     private String time;
-    
+
+    public Activities(){
+
+    }
+
     public Activities(int id, String name, String place, String time){
         this.id=id;
         this.name=name;
