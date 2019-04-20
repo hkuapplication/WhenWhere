@@ -44,9 +44,19 @@
         android:paddingStart="16dp"
         android:paddingEnd="20dp" />
 
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Member" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewUsers"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+    </android.support.v7.widget.RecyclerView>
+
+
 
 </LinearLayout>

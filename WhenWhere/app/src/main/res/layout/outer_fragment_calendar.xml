@@ -1,266 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="352dp">
 
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        <TableRow>
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textStyle="bold"/>
-           <TextView
-               android:layout_width="50dp"
-               android:layout_height="wrap_content"
-               android:text="SUN"
-               android:textStyle="bold"/>
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="MON"
-                android:textStyle="bold"/>
+            android:layout_alignLeft="@+id/linearLayoutBottom"
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="TUE"
-                android:textStyle="bold"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="202dp"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:foregroundGravity="center"
+            android:theme="@style/CalenderViewCustom"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="WED"
-                android:textStyle="bold"/>
+        <LinearLayout
+            android:id="@+id/linearLayoutBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="THU"
-                android:textStyle="bold"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="FRI"
-                android:textStyle="bold"/>
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="SAT"
-                android:textStyle="bold"/>
+        </LinearLayout>
 
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="93dp" />
 
-        </TableRow>
+        <Button
+            android:id="@+id/addEvent"
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listView"
+            android:layout_alignLeft="@+id/calendarView"
+            android:layout_marginTop="-90dp"
+            android:text="Add new events" />
 
+        <Button
+            android:id="@+id/weekly"
+            android:layout_width="356dp"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/calendarView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:text="See weekly schedule" />
 
-
-
-
-
-
-        <TableRow
-            android:id="@+id/time1"
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="00:00"
-            android:width="50dp"
-            android:textStyle="bold" />
-
-
-
-        <TableRow
-         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="01:00"
-
-            android:textStyle="bold"/>
-
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="02:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="03:00"
-            android:textStyle="bold"/>
-
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="04:00"
-
-            android:textStyle="bold" />
-
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="05:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="06:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="07:00"
-            android:textStyle="bold"/>
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="08:00"
-
-            android:textStyle="bold" />
-
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="09:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="10:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="11:00"
-            android:textStyle="bold"/>
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="12:00"
-
-            android:textStyle="bold" />
-
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="13:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="14:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="15:00"
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="16:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="17:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="18:00"
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="19:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="20:00"
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="21:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="22:00"
-
-            android:textStyle="bold"/>
-
-        <TableRow
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="23:00"
-            android:textStyle="bold"/>
-
-    </TableLayout>
-</LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
