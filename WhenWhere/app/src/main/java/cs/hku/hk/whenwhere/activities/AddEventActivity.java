@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import cs.hku.hk.whenwhere.R;
 
 public class AddEventActivity extends AppCompatActivity {
-    //1.define the spinners
+    /*1.define the spinners
     Spinner startTime,startMonth,startDay,endMonth,endDate,endTime;
     //2.set the spinners
     String months[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"};
@@ -18,15 +18,15 @@ public class AddEventActivity extends AppCompatActivity {
     //adapter
     ArrayAdapter<String> adapter;
     ArrayAdapter<String> adapterD;
-    //define String
-    String sMonth,sDay,eMonth,eDay;
+    //define variables to store what the user chooses
+    String sMonth,sDay,eMonth,eDay; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
 
-         startTime = (Spinner) findViewById(R.id.startTime);
+        /* startTime = (Spinner) findViewById(R.id.startTime);
          startMonth = (Spinner) findViewById(R.id.startMonth);
          startDay = (Spinner) findViewById(R.id.startDay);
          endMonth = (Spinner) findViewById(R.id.spinner3);
@@ -129,7 +129,7 @@ public class AddEventActivity extends AppCompatActivity {
             }
         });
 
-        //----------date---------------------------------------
+        //----------date--------------------------------------- */
 
     }
 }
