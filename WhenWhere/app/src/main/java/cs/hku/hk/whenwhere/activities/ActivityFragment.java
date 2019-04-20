@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import cs.hku.hk.whenwhere.R;
@@ -34,6 +35,7 @@ public class ActivityFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_list, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewUsers);
         initObjects();
+
         return view;
     }
     private void initObjects() {
