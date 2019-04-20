@@ -15,9 +15,12 @@ import cs.hku.hk.whenwhere.activities.MapFragment;
 import cs.hku.hk.whenwhere.activities.MeFragment;
 import cs.hku.hk.whenwhere.activities.MemberFragment;
 import cs.hku.hk.whenwhere.activities.TimeFragment;
+import cs.hku.hk.whenwhere.model.Member;
 
 public class OuterNavigationController extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
+
+    private Member user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,8 +29,10 @@ public class OuterNavigationController extends AppCompatActivity
 
         BottomNavigationView navigation=findViewById(R.id.outer_navigation);
         navigation.setOnNavigationItemSelectedListener(this);
-
         loadFragment(new CalendarFragment());
+
+        //获取当前用户
+        user = (Member)getIntent().getSerializableExtra("user");
     }
 
     private boolean loadFragment(Fragment fragment){

@@ -11,16 +11,18 @@ import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import cs.hku.hk.whenwhere.R;
+import cs.hku.hk.whenwhere.model.Member;
 import cs.hku.hk.whenwhere.utils.JSONHelper;
 import cs.hku.hk.whenwhere.utils.OuterNavigationController;
-
-
 
 public class Login extends AppCompatActivity {
 
@@ -114,8 +116,25 @@ public class Login extends AppCompatActivity {
 
         System.out.println("JSON长度: "+JSONString.length());
 
+        //在try-catch外声明想要什么变量
+        int uid = 0;
+        String emailStr = "";
+        String usernameStr = "";
+
+        try{
+            JSONObject rootJSONObject = new JSONObject(JSONString);
+            uid = rootJSONObject.getInt("uid");
+            emailStr = rootJSONObject.getString("email");
+            usernameStr = rootJSONObject.getString("username");
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+        //获取当前登录用户，传到下一个页面
+        Member member = new Member(uid,usernameStr,emailStr);
+
         //成功登录跳转主界面
         Intent intent=new Intent();
+        intent.putExtra("user",member);
         intent.setClass(Login.this, OuterNavigationController.class);
         startActivity(intent);
     }
