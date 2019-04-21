@@ -22,10 +22,12 @@ import java.util.List;
 import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.adapters.Activity_recycle;
 import cs.hku.hk.whenwhere.model.Activities;
+import cs.hku.hk.whenwhere.model.Member;
 
 
 public class ActivityFragment extends Fragment {
    // private AppCompatActivity activity=Activity_List.this;
+    private Member user;
     private RecyclerView recyclerView;
     private List<Activities> listActivities;
     private Activity_recycle activity_recycle;
@@ -43,6 +45,7 @@ public class ActivityFragment extends Fragment {
         return view;
     }
     private void initObjects() {
+        user = (Member)getActivity().getIntent().getSerializableExtra("user");
         listActivities = new ArrayList<>();
         activity_recycle = new Activity_recycle(listActivities);
 
@@ -52,12 +55,12 @@ public class ActivityFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(activity_recycle);
 
-
         addActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
                 intent.setClass(getActivity(), CreateActivity.class);
+                intent.putExtra("user",user);
                 startActivity(intent);
             }
         });

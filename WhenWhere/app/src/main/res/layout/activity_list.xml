@@ -24,33 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/button6"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/calendar" />
-
-        <Button
-            android:id="@+id/button8"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/activity" />
-
-        <Button
-            android:id="@+id/button7"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/me" />
-
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addActivityButton"

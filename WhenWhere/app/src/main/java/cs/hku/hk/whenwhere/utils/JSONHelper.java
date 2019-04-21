@@ -33,14 +33,22 @@ public class JSONHelper {
 
             char[] html = HTMLSource.toCharArray();
             int HTMLEnd=HTML_BUFFER_SIZE;
-            for(int i=0;i<HTML_BUFFER_SIZE;i++){
-                //System.out.print(html[i]);
-                if(html[i]=='}'){ //ASCII '}'
-                    HTMLEnd=i+1;
-                    break;
+
+            //json数据才要裁剪，不然直接返回
+            if(html[0]=='['||html[0]=='{'){
+                char endMark='}'; //一个json
+                if(html[0]=='['){   //jsonArray
+                    endMark=']';
                 }
+                for(int i=0;i<HTML_BUFFER_SIZE;i++){
+                    //System.out.print(html[i]);
+                    if(html[i]==endMark){ //ASCII '}'
+                        HTMLEnd=i+1;
+                        break;
+                    }
+                }
+                HTMLSource=HTMLSource.substring(0,HTMLEnd); //为了缩减读到的jsonString的长度
             }
-            HTMLSource=HTMLSource.substring(0,HTMLEnd); //为了缩减读到的jsonString的长度
             reader_list.close();
             return HTMLSource;
         } catch (Exception e) {
