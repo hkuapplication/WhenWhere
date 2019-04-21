@@ -1,9 +1,11 @@
 package cs.hku.hk.whenwhere.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -27,6 +29,7 @@ public class ActivityFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<Activities> listActivities;
     private Activity_recycle activity_recycle;
+    private FloatingActionButton addActivityButton;
 
     @Nullable
     @Override
@@ -34,6 +37,7 @@ public class ActivityFragment extends Fragment {
        // return inflater.inflate(R.layout.activity_list,null);
         View view = inflater.inflate(R.layout.activity_list, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewUsers);
+        addActivityButton=view.findViewById(R.id.addActivityButton);
         initObjects();
 
         return view;
@@ -47,6 +51,16 @@ public class ActivityFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(activity_recycle);
+
+
+        addActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), CreateActivity.class);
+                startActivity(intent);
+            }
+        });
         //databaseHelper = new DatabaseHelper(activity);
 
         //String emailFromIntent = getIntent().getStringExtra("EMAIL");
