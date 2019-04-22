@@ -76,7 +76,7 @@ public class WeeklyActivity extends AppCompatActivity {
         listEvents.add(e1);
     }
 
-//  color a whole week schedule
+//  color a whole week schedule WITH 7 COLORS
 
     public void coloring(String day, int start, int end){
         int slots=end-start;
@@ -85,8 +85,22 @@ public class WeeklyActivity extends AppCompatActivity {
             String tvID = day + (i);
             int resID = getResources().getIdentifier(tvID, "id", getPackageName());
             tvs[i-start] = ((TextView) findViewById(resID));
-            tvs[i-start].setBackgroundColor(Color.parseColor("#2C0044"));
-        }
+            if(day=="mon"){
+                tvs[i-start].setBackgroundColor(Color.parseColor("#4C0085"));
+            }else if(day=="tue") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#5B009E"));
+            }else if(day=="wed") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#6A00B8"));
+            }else if(day=="thu") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#7900D1"));
+            }else if(day=="fri") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#8400EB"));
+            }else if(day=="sat") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#9F1CFF"));
+            }else if(day=="sun") {
+                tvs[i - start].setBackgroundColor(Color.parseColor("#B54FFF"));
+            }
+            }
     }
 
 
@@ -101,3 +115,5 @@ public class WeeklyActivity extends AppCompatActivity {
     }
 
  }
+
+
