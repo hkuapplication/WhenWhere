@@ -39,9 +39,7 @@
         <activity android:name =".utils.OuterNavigationController"></activity>
         <activity android:name=".activities.Login"></activity>
         <activity android:name=".activities.HistoryActivity" />
-        <activity
-            android:name=".activities.DetailedHistory"
-            android:parentActivityName=".activities.HistoryActivity" />
+
         <activity android:name=".activities.ListActivity" />
         <activity
             android:name=".activities.CreateActivity"

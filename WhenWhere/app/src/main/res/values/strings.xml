@@ -50,14 +50,14 @@
     <string name="todo">todo</string>
     <string name="input_name">Input_name</string>
     <string name="abc123_gmail_com">abc123@gmail.com</string>
-    <string name="notice_name">notice_name</string>
+    <string name="notice_name">Please enter the email address</string>
     <string name="invite">invite</string>
 
     <string name="all_accounts">Members</string>
     <string name="title_member_list">Member List</string>
     <string name="hi">hi</string>
     <string name="act_list_get_name">act_list_get_name</string>
-    <string name="act_list_name">act_list_name</string>
+    <string name="act_list_name">Name</string>
 
     <string name="text_recommend_time_period">Recommend Time Period</string>
 

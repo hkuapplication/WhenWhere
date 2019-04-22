@@ -70,6 +70,8 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         dTime.setOnClickListener(this);
         confirm=(Button)findViewById(R.id.button);
         confirm.setOnClickListener(this);
+        EditText loginNameTxt = (EditText) findViewById(R.id.activityName);
+        loginNameTxt.setOnFocusChangeListener(this.onFocusAutoClearHintListener);
     }
 
     @Override
@@ -101,7 +103,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        String desc=String.format("%dh %dm",hourOfDay,minute);
+        String desc=String.format("%d:%dm",hourOfDay,minute);
         if(timenum==1)
         {
 //            dtime=hourOfDay*60+minute;  //discuss time (min)
@@ -229,4 +231,18 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
                 )
                 .show();
     }
+    public static View.OnFocusChangeListener onFocusAutoClearHintListener = new View.OnFocusChangeListener() {
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+            EditText textView = (EditText) v;
+            String hint;
+            if (hasFocus) {
+
+                //hint = textView.getHint().toString();
+                //textView.setTag(hint);
+                textView.setText("");
+
+            }
+        }
+    };
 }
