@@ -14,12 +14,14 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="37dp"
         android:layout_marginTop="37dp"
-        tools:srcCompat="@tools:sample/avatars[12]" />
+        android:src="@drawable/man" />
 
     <TextView
         android:id="@+id/Username"
         android:layout_width="160dp"
         android:layout_height="35dp"
+        android:gravity="center"
+        android:background="#f0f8ff"
         android:layout_alignTop="@+id/imageView"
         android:layout_alignParentRight="true"
         android:layout_marginTop="2dp"
@@ -30,6 +32,8 @@
         android:id="@+id/emailAccount"
         android:layout_width="160dp"
         android:layout_height="35dp"
+        android:gravity="center"
+        android:background="#f0f8ff"
         android:layout_alignLeft="@+id/Username"
         android:layout_alignBottom="@+id/imageView"
         android:text="55***533" />
@@ -43,7 +47,10 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="140dp"
         android:clickable="true"
-        android:text="History Activities" />
+        android:text="History Activities"
+        android:background="@drawable/round_shape_button"
+        android:textColor="@color/colorAccent"
+        />
 
     <Button
         android:id="@+id/logout"
@@ -54,7 +61,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="216dp"
         android:clickable="true"
-        android:text="Log out" />
+        android:text="Log out"
+        android:background="@drawable/round_shape_button"
+        android:textColor="@color/colorAccent"/>
 
 
 
