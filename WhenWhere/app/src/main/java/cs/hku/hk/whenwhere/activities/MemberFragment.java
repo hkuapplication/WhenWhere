@@ -58,6 +58,7 @@ public class MemberFragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getActivity(), AddMemberActivity.class);
+                intent.putExtra("aid",aid);
                 startActivity(intent);
             }
         });

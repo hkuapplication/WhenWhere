@@ -12,6 +12,7 @@ import cs.hku.hk.whenwhere.utils.InnerNavigationController;
 
 public class AddMemberActivity extends AppCompatActivity {
     private Button button;
+    private int aid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class AddMemberActivity extends AppCompatActivity {
         button=findViewById(R.id.invite);
         EditText loginNameTxt = (EditText) findViewById(R.id.editText);
         loginNameTxt.setOnFocusChangeListener(this.onFocusAutoClearHintListener);
+        aid = getIntent().getIntExtra("aid",-1);
     }
 
     public void onClick(View v)
@@ -26,6 +28,7 @@ public class AddMemberActivity extends AppCompatActivity {
         if(v.getId()==R.id.invite)
         {
             Intent intent=new Intent(AddMemberActivity.this, InnerNavigationController.class);
+            intent.putExtra("aid",aid);
             startActivity(intent);
         }
     }
