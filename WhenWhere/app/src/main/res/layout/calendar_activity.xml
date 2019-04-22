@@ -8,18 +8,10 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
-<android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"/>
-
     <TableLayout
         android:id="@+id/table"
-        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
         <TableRow>
 
@@ -30,45 +22,59 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/sun"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="SUN"
+                android:clickable="true"
+                android:text="sun"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/mon"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="MON"
+                android:clickable="true"
+                android:text="mon"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tue"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="TUE"
+                android:clickable="true"
+                android:text="tue"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/wed"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="WED"
+                android:clickable="true"
+                android:text="wed"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/thu"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="THU"
+                android:clickable="true"
+                android:text="thu"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fri"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="FRI"
+                android:clickable="true"
+                android:text="fri"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/sat"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="SAT"
+                android:clickable="true"
+                android:text="sat"
                 android:textStyle="bold" />
 
 
@@ -84,21 +90,25 @@
                 android:text="00:00" />
 
             <TextView
+                android:id="@+id/sun0"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon0"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue0"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed0"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -128,36 +138,43 @@
                 android:text="01:00" />
 
             <TextView
+                android:id="@+id/sun1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -172,36 +189,43 @@
                 android:text="02:00" />
 
             <TextView
+                android:id="@+id/sun2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -215,36 +239,43 @@
                 android:text="03:00" />
 
             <TextView
+                android:id="@+id/sun3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -259,36 +290,43 @@
                 android:text="04:00" />
 
             <TextView
+                android:id="@+id/sun4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -303,36 +341,43 @@
                 android:text="05:00" />
 
             <TextView
+                android:id="@+id/sun5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat5"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -346,36 +391,43 @@
                 android:text="06:00" />
 
             <TextView
+                android:id="@+id/sun6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -389,36 +441,43 @@
                 android:text="07:00" />
 
             <TextView
+                android:id="@+id/sun7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat7"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -432,36 +491,43 @@
                 android:text="08:00" />
 
             <TextView
+                android:id="@+id/sun8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat8"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -476,36 +542,43 @@
                 android:text="09:00" />
 
             <TextView
+                android:id="@+id/sun9"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat9"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -519,36 +592,43 @@
                 android:text="10:00" />
 
             <TextView
+                android:id="@+id/sun10"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu10"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/fri10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -562,36 +642,43 @@
                 android:text="11:00" />
 
             <TextView
+                android:id="@+id/sun11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat11"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -605,36 +692,43 @@
                 android:text="12:00" />
 
             <TextView
+                android:id="@+id/sun12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -647,37 +741,45 @@
                 android:layout_height="match_parent"
                 android:width="50dp"
                 android:text="13:00" />
+
             <TextView
+                android:id="@+id/sun13"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat13"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -691,36 +793,44 @@
                 android:layout_height="match_parent"
                 android:text="14:00" />
             <TextView
+                android:id="@+id/sun14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+
+                android:id="@+id/mon14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat14"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -733,37 +843,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="15:00" />
+
             <TextView
+                android:id="@+id/sun15"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -776,36 +894,43 @@
                 android:layout_height="match_parent"
                 android:text="16:00" />
             <TextView
+                android:id="@+id/sun16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -819,36 +944,43 @@
                 android:layout_height="match_parent"
                 android:text="17:00" />
             <TextView
+                android:id="@+id/sun17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -862,36 +994,43 @@
                 android:layout_height="match_parent"
                 android:text="18:00" />
             <TextView
+                android:id="@+id/sun18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat18"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -904,36 +1043,43 @@
                 android:layout_height="match_parent"
                 android:text="19:00" />
             <TextView
+                android:id="@+id/sun19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat19"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -946,36 +1092,43 @@
                 android:layout_height="match_parent"
                 android:text="20:00" />
             <TextView
+                android:id="@+id/sun20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat20"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -987,37 +1140,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="21:00" />
+
             <TextView
+                android:id="@+id/sun21"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/mon21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
+                android:id="@+id/sat21"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -1033,36 +1194,43 @@
 
                 />
             <TextView
+                android:id="@+id/sun22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -1075,41 +1243,58 @@
                 android:layout_height="match_parent"
                 android:text="23:00" />
             <TextView
+                android:id="@+id/sun23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/mon23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/tue23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/wed23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/thu23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/fri23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
 
             <TextView
+                android:id="@+id/sat23"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="" />
         </TableRow>
     </TableLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rV"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp" />
 
 
 </RelativeLayout>
