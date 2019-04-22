@@ -139,7 +139,7 @@ public class map extends AppCompatActivity implements GoogleMap.OnMarkerClickLis
                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
                 map.addMarker(new MarkerOptions().position(latLng).title(address)).setTag(0);
                 map.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                Toast.makeText(getApplicationContext(), location.getLatitude() + " " + location.getLongitude(), Toast.LENGTH_LONG);
+                Toast.makeText(map.this, location.getLatitude() + " " + location.getLongitude(), Toast.LENGTH_SHORT);
 
             }
         }
@@ -151,91 +151,6 @@ public class map extends AppCompatActivity implements GoogleMap.OnMarkerClickLis
             startActivity(intent);
         }
     }
-    /*
-    private class MyMarkerListener implements GoogleMap.OnMarkerClickListener,
-            GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerDragListener {
-        @Override
-        public boolean onMarkerClick(Marker marker) {
-            showToast(marker.getTitle());
-            return false;
-        }
-
-        @Override
-        public void onInfoWindowClick(Marker marker) {
-            showToast(marker.getTitle());
-        }
-
-        @Override
-        public void onMarkerDragStart(Marker marker) {
-            String text = "onMarkerDragStart";
-            tvMarkerDrag.setText(text);
-        }
-
-        @Override
-        public void onMarkerDragEnd(Marker marker) {
-            String text = "onMarkerDragEnd";
-            tvMarkerDrag.setText(text);
-        }
-
-        @Override
-        public void onMarkerDrag(Marker marker) {
-            String text = "onMarkerDrag.  Current Position: "
-                    + marker.getPosition();
-            tvMarkerDrag.setText(text);
-        }
-    }
-    private class MyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
-        private final View infoWindow;
-
-        MyInfoWindowAdapter() {
-            infoWindow = View.inflate(map.this, R.layout.custom_info_window, null);
-        }
-
-        @Override
-        public View getInfoWindow(Marker marker) {
-            int logoId;
-            if (marker.equals(marker_yangmingshan)) {
-                logoId = R.drawable.logo_yangmingshan;
-            } else if (marker.equals(marker_taroko)) {
-                logoId = R.drawable.logo_taroko;
-            } else if (marker.equals(marker_yushan)) {
-                logoId = R.drawable.logo_yushan;
-            } else if (marker.equals(marker_kenting)) {
-                logoId = R.drawable.logo_kenting;
-            } else {
-                logoId = 0;
-            }
-
-            ImageView ivLogo = ((ImageView) infoWindow
-                    .findViewById(R.id.ivLogo));
-            ivLogo.setImageResource(logoId);
-
-            String title = marker.getTitle();
-            TextView tvTitle = ((TextView) infoWindow
-                    .findViewById(R.id.tvTitle));
-            tvTitle.setText(title);
-
-            String snippet = marker.getSnippet();
-            TextView tvSnippet = ((TextView) infoWindow
-                    .findViewById(R.id.tvSnippet));
-            tvSnippet.setText(snippet);
-            return infoWindow;
-        }
-
-        @Override
-        public View getInfoContents(Marker marker) {
-            return null;
-        }
-    }
-    public void onClearMapClick(View view) {
-        map.clear();
-    }
-
-    public void onResetMapClick(View view) {
-        map.clear();
-        addMarkersToMap();
-    }
-*/
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 
@@ -259,7 +174,7 @@ public class map extends AppCompatActivity implements GoogleMap.OnMarkerClickLis
                 alertdialogbuilder.setPositiveButton("Sure", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(map.this, "username:" + marker.getTitle(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(map.this, "Address Name:" + marker.getTitle(), Toast.LENGTH_SHORT).show();
                         marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.pin));
                         marker.setTag(1);
                     }

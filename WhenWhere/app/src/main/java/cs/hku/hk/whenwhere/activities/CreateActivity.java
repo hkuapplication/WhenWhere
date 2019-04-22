@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -37,6 +38,8 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         dTime.setOnClickListener(this);
         confirm=(Button)findViewById(R.id.button);
         confirm.setOnClickListener(this);
+        EditText loginNameTxt = (EditText) findViewById(R.id.editText2);
+        loginNameTxt.setOnFocusChangeListener(this.onFocusAutoClearHintListener);
     }
 
     @Override
@@ -112,8 +115,25 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
         {
             //将数据加入数据库中
             //back to activity list
+            //atime,dtime分别为activity session和discussion session，单位为分钟
+            //mYear,mMonth,mDay为开始日期
+            //eYear，eMonth，eDay为结束日期
             Intent intent=new Intent(CreateActivity.this, OuterNavigationController.class);
             startActivity(intent);
         }
     }
+    public static View.OnFocusChangeListener onFocusAutoClearHintListener = new View.OnFocusChangeListener() {
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+            EditText textView = (EditText) v;
+            String hint;
+            if (hasFocus) {
+
+                //hint = textView.getHint().toString();
+                //textView.setTag(hint);
+                textView.setText("");
+
+            }
+        }
+    };
 }

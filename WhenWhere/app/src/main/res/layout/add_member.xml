@@ -26,8 +26,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:text="@string/notice_name"
-            tools:text="Please enter the email address" />
+            android:gravity="center"
+            android:textSize="20sp"
+            android:background="@color/colorBackground"
+            android:text="@string/notice_name" />
 
         <EditText
             android:id="@+id/editText"
@@ -35,15 +37,17 @@
             android:layout_height="87dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/abc123_gmail_com"
+            android:gravity="center"
+            android:textSize="20sp"
             android:inputType="textPersonName"
-            android:text="@string/input_name" />
+            android:text="@string/abc123_gmail_com" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/invite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/invite"
+            android:onClick="onClick"
             tools:text="INVITE" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

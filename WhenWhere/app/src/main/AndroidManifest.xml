@@ -37,6 +37,9 @@
         <activity android:name=".activities.map">
         </activity>
         <activity android:name=".activities.CreateActivity"></activity>
+        <activity android:name=".activities.AddMemberActivity"></activity>
+        <activity android:name=".activities.HistoryActivity"></activity>
+        <activity android:name=".activities.Login"></activity>
     </application>
 
 </manifest>
