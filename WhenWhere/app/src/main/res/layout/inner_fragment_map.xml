@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="@string/text_map"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginRight="24dp" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        app:srcCompat="@drawable/map"
+        android:contentDescription="TODO"
+        android:onClick="onClick"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

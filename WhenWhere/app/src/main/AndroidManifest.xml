@@ -25,15 +25,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBvj2EWonRPjRWOJfJYDRfb0EVwGux-Fms" />
 
-        <activity android:name=".activities.CreateActivity">
+        <activity android:name=".utils.OuterNavigationController">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".utils.OuterNavigationController">
+        <activity android:name=".utils.InnerNavigationController">
         </activity>
+        <activity android:name=".activities.map">
+        </activity>
+        <activity android:name=".activities.CreateActivity"></activity>
     </application>
 
 </manifest>
