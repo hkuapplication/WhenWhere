@@ -44,7 +44,15 @@ public class WeeklyActivity extends AppCompatActivity {
                 tvs[i-15] = ((TextView) findViewById(resID));
                 tvs[i-15].setBackgroundColor(Color.parseColor("#2C0044"));
             } */
+
+
+      //fake
         coloring("mon",15,18);
+        coloring("tue",6,10);
+        coloring("wed",11,13);
+        coloring("sat",17,20)
+       // initObjects("mon");
+
         }
 
  public void initObjects(String date){
@@ -55,7 +63,7 @@ public class WeeklyActivity extends AppCompatActivity {
      recyclerView.setItemAnimator(new DefaultItemAnimator());
      recyclerView.setHasFixedSize(true);
      recyclerView.setAdapter(events_recycle);
-     getDataFromMYSQL(date);
+     getDataFromMYSQL(date); //database
 
  }
 
@@ -83,7 +91,6 @@ public class WeeklyActivity extends AppCompatActivity {
 
 
     public void setClick (final TextView t){
-
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,5 +101,3 @@ public class WeeklyActivity extends AppCompatActivity {
     }
 
  }
-
-
