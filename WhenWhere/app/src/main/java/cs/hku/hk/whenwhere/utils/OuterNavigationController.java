@@ -1,5 +1,6 @@
 package cs.hku.hk.whenwhere.utils;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,9 +12,11 @@ import android.view.MenuItem;
 import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.activities.ActivityFragment;
 import cs.hku.hk.whenwhere.activities.CalendarFragment;
+import cs.hku.hk.whenwhere.activities.CreateActivity;
 import cs.hku.hk.whenwhere.activities.MapFragment;
 import cs.hku.hk.whenwhere.activities.MeFragment;
 import cs.hku.hk.whenwhere.activities.MemberFragment;
+import cs.hku.hk.whenwhere.activities.Register;
 import cs.hku.hk.whenwhere.activities.TimeFragment;
 import cs.hku.hk.whenwhere.model.Member;
 
@@ -65,9 +68,18 @@ public class OuterNavigationController extends AppCompatActivity
 
             case R.id.navigation_me:
                 fragment = new MeFragment();
+//                return loadActivity();
                 break;
         }
 
         return loadFragment(fragment);
     }
+
+    public boolean loadActivity(){
+        Intent intent=new Intent();
+        intent.setClass(OuterNavigationController.this, Register.class);
+        startActivity(intent);
+        return true;
+    }
+
 }
