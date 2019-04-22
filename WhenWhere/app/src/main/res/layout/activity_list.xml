@@ -9,12 +9,13 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewUsers"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#f0f8ff"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="347dp"
-        android:layout_height="44dp"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="16dp"
@@ -26,11 +27,10 @@
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent">
 
-
     </LinearLayout>
 
-    <Button
-        android:id="@+id/add"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="320dp"
@@ -38,12 +38,11 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:clickable="true"
-        android:focusable="true"
-        android:text="ADD new activity"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:focusable="true" />
 
 </android.support.constraint.ConstraintLayout>
