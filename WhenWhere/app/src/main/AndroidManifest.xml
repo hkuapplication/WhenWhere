@@ -27,13 +27,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBvj2EWonRPjRWOJfJYDRfb0EVwGux-Fms" />
 
+<<<<<<< HEAD
         <activity android:name=".activities.Register">
+=======
+        <activity android:name=".utils.OuterNavigationController">
+>>>>>>> BranchYYT
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name =".utils.OuterNavigationController"></activity>
         <activity android:name=".activities.Login"></activity>
         <activity android:name=".activities.HistoryActivity" />
@@ -48,6 +53,13 @@
             android:name=".activities.AddMemberActivity" />
         <activity android:name=".activities.AddEventActivity" />
         <activity android:name=".activities.WeeklyActivity"></activity>
+=======
+        <activity android:name=".utils.InnerNavigationController">
+        </activity>
+        <activity android:name=".activities.map">
+        </activity>
+        <activity android:name=".activities.CreateActivity"></activity>
+>>>>>>> BranchYYT
     </application>
 
 </manifest>

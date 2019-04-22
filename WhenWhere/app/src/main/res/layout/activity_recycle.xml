@@ -17,13 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/placepic"
-                tools:srcCompat="@tools:sample/avatars[0]" />
 
             <LinearLayout
                 android:layout_width="221dp"
@@ -42,6 +35,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/act_list_name"
+                        android:textSize="20sp"
                         tools:text="Name" />
 
                     <TextView
@@ -49,6 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:textSize="20sp"
                         android:text="@string/act_list_get_name"
                         tools:text="Name" />
                 </LinearLayout>
@@ -63,6 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="20sp"
                         android:text="@string/Time" />
 
                     <TextView
@@ -70,6 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:textSize="20sp"
                         android:text="@string/Time" />
                 </LinearLayout>
 
@@ -83,6 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="20sp"
                         android:text="@string/place" />
 
                     <TextView
@@ -90,17 +88,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:textSize="20sp"
                         android:text="@string/place" />
                 </LinearLayout>
             </LinearLayout>
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="140dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/todo"
-                tools:srcCompat="@tools:sample/avatars[1]" />
+                android:onClick="onClick"
+                android:src="@drawable/todo"/>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
