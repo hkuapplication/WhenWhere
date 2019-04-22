@@ -1,14 +1,12 @@
 package cs.hku.hk.whenwhere.activities;
 
 import android.app.Activity;
-<<<<<<< HEAD
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
-=======
-import android.content.Intent;
->>>>>>> BranchYYT
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,6 +34,7 @@ import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.adapters.Activity_recycle;
 import cs.hku.hk.whenwhere.model.Activities;
 import cs.hku.hk.whenwhere.model.Member;
+import cs.hku.hk.whenwhere.utils.InnerNavigationController;
 import cs.hku.hk.whenwhere.utils.JSONHelper;
 
 
@@ -43,18 +43,13 @@ public class ActivityFragment extends Fragment {
     private JSONHelper jsonHelper=JSONHelper.getInstance();
     private Member user;
     private RecyclerView recyclerView;
-<<<<<<< HEAD
+
     //TODO
     private List<Activities> listActivities = new ArrayList<>();
     private Activity_recycle activity_recycle = new Activity_recycle(listActivities);
 
     private FloatingActionButton addActivityButton;
 
-=======
-    private List<Activities> listActivities;
-    private Activity_recycle activity_recycle;
-    private FloatingActionButton button;
->>>>>>> BranchYYT
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -63,11 +58,12 @@ public class ActivityFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerViewUsers);
         addActivityButton=view.findViewById(R.id.addActivityButton);
         initObjects();
-        button=(FloatingActionButton) view.findViewById(R.id.floatingActionButton);
-        button.setOnClickListener(new View.OnClickListener(){
+        addActivityButton=(FloatingActionButton) view.findViewById(R.id.addActivityButton);
+        addActivityButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getActivity(), CreateActivity.class);
+                intent.putExtra("user",user);
                 startActivity(intent);
             }
         });
@@ -75,15 +71,6 @@ public class ActivityFragment extends Fragment {
     }
     private void initObjects() {
         user = (Member)getActivity().getIntent().getSerializableExtra("user");
-
-//        listActivities = new ArrayList<>();
-//        activity_recycle = new Activity_recycle(listActivities);
-
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-//        recyclerView.setLayoutManager(mLayoutManager);
-//        recyclerView.setItemAnimator(new DefaultItemAnimator());
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setAdapter(activity_recycle);
 
         addActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +134,20 @@ public class ActivityFragment extends Fragment {
                     recyclerView.setItemAnimator(new DefaultItemAnimator());
                     recyclerView.setHasFixedSize(true);
                     recyclerView.setAdapter(activity_recycle);
+
+                    activity_recycle.setOnItemClickListener(new Activity_recycle.OnItemClickListener() {
+                        @Override
+                        public void onItemClickListener(int position) {
+                           // user=(Member)getActivity().getIntent().getSerializableExtra("user");
+                            // user=new Member(1,"yyy","yao@123.com");
+                            Toast.makeText(getContext(),"点击了一下"+listActivities.get(position).getId()+"user:"+user.getId(),Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(getContext(), InnerNavigationController.class);
+                            //将当前用户和活动id传给inner
+                            intent.putExtra("user",user);
+                            intent.putExtra("aid",listActivities.get(position).getId());
+                            getContext().startActivity(intent);
+                        }
+                    });
 
                     alert( "Success", "Sucess load all activities." );
                 } else {

@@ -14,6 +14,7 @@ import com.google.android.gms.maps.MapFragment;
 
 import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.model.Activities;
+import cs.hku.hk.whenwhere.model.Member;
 import cs.hku.hk.whenwhere.utils.InnerNavigationController;
 
 import java.util.List;
@@ -29,21 +30,47 @@ public class Activity_recycle extends RecyclerView.Adapter<Activity_recycle.User
         // inflating recycler item view
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.activity_recycle, parent, false);
-        button=itemView.findViewById(R.id.imageButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(itemView.getContext(), InnerNavigationController.class);
-                itemView.getContext().startActivity(intent);
-            }
-        });
+//        button=itemView.findViewById(R.id.imageButton);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(itemView.getContext(), InnerNavigationController.class);
+//                itemView.getContext().startActivity(intent);
+//            }
+//        });
+
+
+
         return new UserViewHolder(itemView);
     }
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
+        final int layoutPosition = holder.getLayoutPosition ();
+        //必须在itemView的点击事件里面判断
+        holder.itemView.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+
+                if(onItemClickListener!=null){
+                    onItemClickListener.onItemClickListener (layoutPosition);
+                }
+
+            }
+        });
+
         holder.textViewName.setText(listActivities.get(position).getName());
         holder.textViewTime.setText(listActivities.get(position).getTime());
         holder.textViewPlace.setText(listActivities.get(position).getPlace());
+    }
+
+    private OnItemClickListener onItemClickListener;
+    //创建接口
+    public interface OnItemClickListener{
+        void onItemClickListener(int position);
+    }
+    //外界调用的方法
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -57,12 +84,29 @@ public class Activity_recycle extends RecyclerView.Adapter<Activity_recycle.User
         public TextView textViewName;
         public TextView textViewTime;
         public TextView textViewPlace;
+        public ImageButton imageButton;
 
         public UserViewHolder(View view) {
             super(view);
             textViewName = view.findViewById(R.id.get_name);
             textViewTime = view.findViewById(R.id.get_time);
             textViewPlace = view.findViewById(R.id.get_place);
+            imageButton = view.findViewById(R.id.imageButton);
         }
     }
+
+
+
+    //为了button点击时可以get到position而建的一个接口
+//    private OnItemClickListener mOnItemClickListener;
+//
+//    public interface OnItemClickListener {
+//        void onItemClick(View view, int position);
+//    }
+//    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+//        mOnItemClickListener = onItemClickListener;
+//
+//    }
+
+
 }

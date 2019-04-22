@@ -57,16 +57,12 @@
     <string name="title_member_list">Member List</string>
     <string name="hi">hi</string>
     <string name="act_list_get_name">act_list_get_name</string>
-<<<<<<< HEAD
     <string name="act_list_name">act_list_name</string>
 
     <string name="text_recommend_time_period">Recommend Time Period</string>
-    <string name="text_date">date</string>
-=======
-    <string name="act_list_name">Name</string>
+
     <string name="text_date">start date</string>
     <string name="enddate">end date</string>
->>>>>>> BranchYYT
     <string name="email">Email:</string>
     <string name="c_events">c_events</string>
     <string name="title_Markers">Markers</string>

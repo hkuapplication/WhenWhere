@@ -12,9 +12,13 @@ import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.activities.MapFragment;
 import cs.hku.hk.whenwhere.activities.MemberFragment;
 import cs.hku.hk.whenwhere.activities.TimeFragment;
+import cs.hku.hk.whenwhere.model.Member;
 
 public class InnerNavigationController extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
+
+    private Member user;
+    private int aid;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +29,10 @@ public class InnerNavigationController extends AppCompatActivity
         navigation.setOnNavigationItemSelectedListener(this);
 
         loadFragment(new MemberFragment());
+
+        //获取当前用户
+        user = (Member)getIntent().getSerializableExtra("user");
+        aid = (int) getIntent().getIntExtra("aid",-1);
     }
 
     private boolean loadFragment(Fragment fragment){
