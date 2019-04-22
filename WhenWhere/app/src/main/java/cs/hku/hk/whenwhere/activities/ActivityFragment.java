@@ -66,7 +66,7 @@ public class ActivityFragment extends Fragment {
             @Override
             public void onItemClickListener(int position) {
                 user=(Member)getActivity().getIntent().getSerializableExtra("user");
-               // user=new Member(1,"yyy","yao@123.com");
+                user=new Member(1,"yyy","yao@123.com");
                 Toast.makeText(getContext(),"点击了一下"+listActivities.get(position).getId()+"user:"+user.getId(),Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getContext(), InnerNavigationController.class);
                 getContext().startActivity(intent);
