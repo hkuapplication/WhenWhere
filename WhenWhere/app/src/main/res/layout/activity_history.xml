@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:textSize="16sp"
-            android:textColor="#0000ff"
+            android:textColor="@android:color/holo_purple"
             tools:text="birthday party"
 
             android:layout_marginStart="70dp" />
@@ -55,7 +55,7 @@
             android:layout_alignLeft="@id/get_name"
             android:layout_below="@id/get_name"
             android:textSize="16sp"
-            android:textColor="#0000ff"
+            android:textColor="@android:color/holo_purple"
             tools:text="pokfulam road, hku"
             android:layout_alignStart="@id/get_name" />
         <TextView
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/get_name"
             android:layout_below="@id/get_place"
-            android:textColor="#0000ff"
+            android:textColor="@android:color/holo_purple"
             android:textSize="14sp"
             tools:text="2019.04.01 13:00-14:00"
             android:layout_alignStart="@id/get_name" />
