@@ -22,52 +22,59 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/sun"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="SUN"
                 android:clickable="true"
+                android:text="sun"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/mon"
                 android:layout_width="50dp"
-                android:clickable="true"
                 android:layout_height="wrap_content"
-                android:text="MON"
+                android:clickable="true"
+                android:text="mon"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tue"
                 android:layout_width="50dp"
-                android:clickable="true"
                 android:layout_height="wrap_content"
-                android:text="TUE"
+                android:clickable="true"
+                android:text="tue"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/wed"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="WED"
                 android:clickable="true"
+                android:text="wed"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/thu"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="THU"
+                android:text="thu"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fri"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="FRI"
                 android:clickable="true"
+                android:text="fri"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/sat"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="SAT"
                 android:clickable="true"
+                android:text="sat"
                 android:textStyle="bold" />
 
 
