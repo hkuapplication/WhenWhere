@@ -1293,6 +1293,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="0dp"
+        android:background="#f0f8ff"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp" />
 
