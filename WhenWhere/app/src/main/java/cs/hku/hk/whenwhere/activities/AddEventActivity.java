@@ -1,135 +1,159 @@
 package cs.hku.hk.whenwhere.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import cs.hku.hk.whenwhere.R;
+import cs.hku.hk.whenwhere.utils.OuterNavigationController;
 
-public class AddEventActivity extends AppCompatActivity {
-    /*1.define the spinners
-    Spinner startTime,startMonth,startDay,endMonth,endDate,endTime;
-    //2.set the spinners
-    String months[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"};
-    String days[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
-    //adapter
-    ArrayAdapter<String> adapter;
-    ArrayAdapter<String> adapterD;
-    //define variables to store what the user chooses
-    String sMonth,sDay,eMonth,eDay; */
-
+public class AddEventActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+    private int mYear,mDay,mMonth;
+    private int eYear,eDay,eMonth;
+    private int datenum,timenum;
+    private int dtime,atime;
+    private Button confirm;
+    TextView startDate, endDate, aTime, dTime,week;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
+        startDate=(TextView)findViewById(R.id.startDate);
+        dTime=findViewById(R.id.endtime);
+        aTime=findViewById(R.id.starttime);
+        week=findViewById(R.id.xingqi);
+        startDate.setOnClickListener(this);
+        aTime.setOnClickListener(this);
+        dTime.setOnClickListener(this);
+        confirm=(Button)findViewById(R.id.button);
+        confirm.setOnClickListener(this);
+        EditText loginNameTxt = (EditText) findViewById(R.id.activityName);
+        loginNameTxt.setOnFocusChangeListener(this.onFocusAutoClearHintListener);
+    }
 
-        /* startTime = (Spinner) findViewById(R.id.startTime);
-         startMonth = (Spinner) findViewById(R.id.startMonth);
-         startDay = (Spinner) findViewById(R.id.startDay);
-         endMonth = (Spinner) findViewById(R.id.spinner3);
-         endDate = (Spinner) findViewById(R.id.endDate);
-         endTime = (Spinner) findViewById(R.id.spinner4);
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        //之后在button事件里加入数据库
+        String desc= String.format("%d-%d-%d",year,month+1,dayOfMonth);
+       // if(datenum==1)
+        //{
+            mYear=year;
+            mMonth=month;
+            mDay=dayOfMonth;
+            startDate.setText(desc);
+        Date date=new Date(year,month,dayOfMonth);
+        week.setText(getWeek(date));
 
-        adapter = new ArrayAdapter<String> (this,android.R.layout.simple_list_item_1, months);
-        adapterD = new ArrayAdapter<String> (this,android.R.layout.simple_list_item_1, days);
-        startMonth.setAdapter(adapter); startDay.setAdapter(adapterD);
-        endMonth.setAdapter(adapter);   endDate.setAdapter(adapterD);
-
-        //--------------months-------------------------------------------------------------
-        endMonth.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        eMonth = "Jan";
-                        break;
-                    case 1:
-                        eMonth = "Feb";
-                        break;
-                    case 2:
-                        eMonth = "Mar";
-                        break;
-                    case 3:
-                        eMonth = "Apr";
-                        break;
-                    case 4:
-                        eMonth = "May";
-                        break;
-                    case 5:
-                        eMonth = "Jun";
-                        break;
-                    case 6:
-                        eMonth = "Jul";
-                        break;
-                    case 7:
-                        eMonth = "Aug";
-                        break;
-                    case 8:
-                        eMonth = "Sept";
-                        break;
-                    case 9:
-                        eMonth = "Oct";
-                        break;
-                    case 10:
-                        eMonth = "Nov";
-                        break;
-                    case 11:
-                        eMonth = "Dec";
-                        break;
-                }
-            }
-        });
-
-        startMonth.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        sMonth = "Jan";
-                        break;
-                    case 1:
-                        sMonth = "Feb";
-                        break;
-                    case 2:
-                        sMonth = "Mar";
-                        break;
-                    case 3:
-                        sMonth = "Apr";
-                        break;
-                    case 4:
-                        sMonth = "May";
-                        break;
-                    case 5:
-                        sMonth = "Jun";
-                        break;
-                    case 6:
-                        sMonth = "Jul";
-                        break;
-                    case 7:
-                        sMonth = "Aug";
-                        break;
-                    case 8:
-                        sMonth = "Sept";
-                        break;
-                    case 9:
-                        sMonth = "Oct";
-                        break;
-                    case 10:
-                        sMonth = "Nov";
-                        break;
-                    case 11:
-                        sMonth = "Dec";
-                        break;
-
-
-                }
-            }
-        });
-
-        //----------date--------------------------------------- */
+       // }
+        /*
+        if(datenum==2)
+        {
+            eYear=year;
+            eMonth=month;
+            eDay=dayOfMonth;
+            endDate.setText(desc);
+        }
+        */
 
     }
+    //根据日期取得星期几
+    public static String getWeek(Date date){
+        String[] weeks = {"Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"};
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int week_index = cal.get(Calendar.DAY_OF_WEEK)-1;
+        if(week_index<0){
+            week_index = 0;
+        }
+        return weeks[week_index];
+    }
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        String desc=String.format("%d:%d",hourOfDay,minute);
+        if(timenum==1)
+        {
+            dtime=hourOfDay*60+minute;
+            aTime.setText(desc);
+        }
+        if(timenum==2)
+        {
+            atime=hourOfDay*60+minute;
+            dTime.setText(desc);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.startDate)
+        {
+            datenum=1;
+            Calendar ca= Calendar.getInstance();
+            DatePickerDialog dialog=new DatePickerDialog(this,this,
+                    ca.get(Calendar.YEAR), ca.get(Calendar.MONTH), ca.get(Calendar.DAY_OF_MONTH));
+            dialog.show();
+        }
+        /*
+        if(v.getId()==R.id.endDate)
+        {
+            datenum=2;
+            Calendar ca= Calendar.getInstance();
+            DatePickerDialog dialog=new DatePickerDialog(this,this,
+                    ca.get(Calendar.YEAR), ca.get(Calendar.MONTH), ca.get(Calendar.DAY_OF_MONTH));
+            dialog.show();
+        }
+        */
+        if(v.getId()==R.id.starttime)
+        {
+            timenum=1;
+            Calendar calendar=Calendar.getInstance();
+            TimePickerDialog dialog=new TimePickerDialog(this,this,
+                    calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true);
+            dialog.show();
+        }
+        if(v.getId()==R.id.endtime)
+        {
+            timenum=2;
+            Calendar calendar=Calendar.getInstance();
+            TimePickerDialog dialog=new TimePickerDialog(this,this,
+                    calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true);
+            dialog.show();
+        }
+        if(v.getId()==R.id.button)
+        {
+            //将数据加入数据库中
+            //back to activity list
+            //atime,dtime分别为activity session和discussion session，单位为分钟
+            //mYear,mMonth,mDay为开始日期
+            //eYear，eMonth，eDay为结束日期
+            Intent intent=new Intent(AddEventActivity.this, OuterNavigationController.class);
+            startActivity(intent);
+        }
+    }
+    public static View.OnFocusChangeListener onFocusAutoClearHintListener = new View.OnFocusChangeListener() {
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+            EditText textView = (EditText) v;
+            String hint;
+            if (hasFocus) {
+
+                //hint = textView.getHint().toString();
+                //textView.setTag(hint);
+                textView.setText("");
+
+            }
+        }
+    };
 }

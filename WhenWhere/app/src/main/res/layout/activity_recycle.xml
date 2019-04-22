@@ -3,18 +3,22 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="164dp"
+    android:background="#cccccc"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:layout_marginTop="3dp"
         android:layout_width="381dp"
-        android:layout_height="159dp"
+        android:layout_height="158dp"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp">
+
+        card_view:cardCornerRadius="8dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="376dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:orientation="horizontal">
 
 
@@ -29,22 +33,27 @@
                     android:layout_height="49dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/act_list_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/act_list_name"
+                        android:layout_marginTop="3dp"
                         android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
                         tools:text="Name" />
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/get_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:textSize="20sp"
                         android:text="@string/act_list_get_name"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@android:color/holo_purple"
                         tools:text="Name" />
                 </LinearLayout>
 
@@ -53,20 +62,25 @@
                     android:layout_height="50dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
                         android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:text="@string/Time" />
+                        android:gravity="center"
+                        android:text="@string/Time"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/get_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:textSize="20sp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@android:color/holo_purple"
                         android:text="@string/Time" />
                 </LinearLayout>
 
@@ -75,20 +89,25 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/place"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="20sp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/place" />
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/get_place"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:textSize="20sp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@android:color/holo_purple"
                         android:text="@string/place" />
                 </LinearLayout>
             </LinearLayout>

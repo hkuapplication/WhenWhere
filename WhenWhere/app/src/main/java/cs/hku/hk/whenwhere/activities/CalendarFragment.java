@@ -12,31 +12,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import cs.hku.hk.whenwhere.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cs.hku.hk.whenwhere.R;
-import cs.hku.hk.whenwhere.adapters.Activity_recycle;
+
+import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.adapters.Events_recycle;
-import cs.hku.hk.whenwhere.model.Activities;
 import cs.hku.hk.whenwhere.model.Events;
-import cs.hku.hk.whenwhere.model.Member;
 
 public class CalendarFragment extends Fragment {
-    private Member user;
     Button addButton;
     Button weekly;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.outer_fragment_calendar,null);
-
         addButton = (Button)view.findViewById(R.id.addEvent);
         weekly = (Button)view.findViewById(R.id.weekly);
-
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,9 +47,9 @@ public class CalendarFragment extends Fragment {
             }
         });
 
-        user = (Member)getActivity().getIntent().getSerializableExtra("user");
-
         return view;
 
     }
+
+
 }

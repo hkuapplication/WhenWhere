@@ -31,8 +31,8 @@
     <string name="activity_name">Name</string>
     <string name="time">time</string>
     <string name="to">to</string>
-    <string name="activity_session">activity session</string>
-    <string name="discussion_session">discussion session</string>
+    <string name="activity_session">start time</string>
+    <string name="discussion_session">end time</string>
     <string name="my_activity">my activity</string>
     <string name="name">Dinner</string>
     <string name="start_date">2019-04-01</string>
@@ -73,4 +73,6 @@
     <string name="address_name">Hong Kong</string>
     <string name="Search_Button">Search</string>
     <string name="Back">Back</string>
+    <string name="date">Date</string>
+    <string name="week">Weekday</string>
 </resources>
