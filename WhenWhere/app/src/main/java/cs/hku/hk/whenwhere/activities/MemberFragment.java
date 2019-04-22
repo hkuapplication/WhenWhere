@@ -58,6 +58,7 @@ public class MemberFragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getActivity(), AddMemberActivity.class);
+                intent.putExtra("aid",aid);
                 startActivity(intent);
             }
         });
@@ -117,7 +118,7 @@ public class MemberFragment extends Fragment {
                     recyclerView.setHasFixedSize(true);
                     recyclerView.setAdapter(member_recycle);
 
-                    alert( "Success", "Sucess load all members." );
+//                    alert( "Success", "Sucess load all members." );
                 } else {
                     alert( "Error", "Fail to load all members." );
                 }
