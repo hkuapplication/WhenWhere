@@ -149,7 +149,7 @@ public class ActivityFragment extends Fragment {
                         }
                     });
 
-                    alert( "Success", "Sucess load all activities." );
+//                    alert( "Success", "Sucess load all activities." );
                 } else {
                     alert( "Error", "Invalid email or password." );
                 }

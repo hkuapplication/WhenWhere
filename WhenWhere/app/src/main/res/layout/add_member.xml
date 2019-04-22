@@ -37,9 +37,9 @@
             android:layout_height="87dp"
             android:ems="10"
             android:gravity="center"
-            android:textSize="20sp"
             android:inputType="textPersonName"
-            android:text="@string/abc123_gmail_com" />
+            android:text="@string/abc123_gmail_com"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/invite"
