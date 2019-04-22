@@ -27,23 +27,29 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:text="@string/notice_name"
-            tools:text="Please enter the email address" />
+            android:background="#e6e6fa"
+            android:gravity="center"
+            tools:text="Please enter the email address:" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
-            android:layout_height="87dp"
+            android:layout_height="58dp"
             android:autofillHints=""
+            android:background="#f0f8ff"
             android:ems="10"
             android:hint="@string/abc123_gmail_com"
+            android:gravity="center"
             android:inputType="textPersonName"
-            android:text="@string/input_name" />
+            />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/invite"
+            android:background="@drawable/round_shape_button"
+            android:textColor="@color/colorAccent"
             tools:text="INVITE" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
