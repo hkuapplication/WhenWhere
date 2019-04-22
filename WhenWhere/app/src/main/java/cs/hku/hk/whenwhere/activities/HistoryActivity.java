@@ -1,30 +1,53 @@
 package cs.hku.hk.whenwhere.activities;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import cs.hku.hk.whenwhere.R;
+import cs.hku.hk.whenwhere.adapters.Activity_recycle;
+import cs.hku.hk.whenwhere.model.Activities;
+
 public class HistoryActivity extends AppCompatActivity {
-    Button button1;
+    private RecyclerView recyclerView;
+    private List<Activities> listActivities;
+    private Activity_recycle activity_recycle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        button1 = (Button)findViewById(R.id.more);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(HistoryActivity.this, DetailedHistory.class);
-                //pass location address to detailed page
-                Bundle bundle = new Bundle();
-                bundle.putString("location","address");
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
+        getSupportActionBar().setTitle("");
+        initViews();
+        initObjects();
+
+    }
+
+    private void initObjects() {
+        listActivities = new ArrayList<>();
+        activity_recycle = new Activity_recycle(listActivities);
+
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(activity_recycle);
+
+        getDataFromMYSQL(); // get the history activities
+    }
+
+    private void getDataFromMYSQL() {
+
+    }
+
+
+    private void initViews() {
+        recyclerView = findViewById(R.id.recyclerViewUsers);
     }
 }
