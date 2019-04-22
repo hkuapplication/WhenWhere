@@ -99,7 +99,6 @@
                 android:layout_height="140dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/todo"
-                android:onClick="onClick"
                 android:src="@drawable/todo"/>
 
         </LinearLayout>

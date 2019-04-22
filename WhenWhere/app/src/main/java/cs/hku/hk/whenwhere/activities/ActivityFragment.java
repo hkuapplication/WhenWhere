@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,6 +24,8 @@ import java.util.List;
 import cs.hku.hk.whenwhere.R;
 import cs.hku.hk.whenwhere.adapters.Activity_recycle;
 import cs.hku.hk.whenwhere.model.Activities;
+import cs.hku.hk.whenwhere.model.Member;
+import cs.hku.hk.whenwhere.utils.InnerNavigationController;
 
 
 public class ActivityFragment extends Fragment {
@@ -31,6 +34,8 @@ public class ActivityFragment extends Fragment {
     private List<Activities> listActivities;
     private Activity_recycle activity_recycle;
     private FloatingActionButton button;
+    private Member user;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,6 +62,16 @@ public class ActivityFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(activity_recycle);
+        activity_recycle.setOnItemClickListener(new Activity_recycle.OnItemClickListener() {
+            @Override
+            public void onItemClickListener(int position) {
+                user=(Member)getActivity().getIntent().getSerializableExtra("user");
+               // user=new Member(1,"yyy","yao@123.com");
+                Toast.makeText(getContext(),"点击了一下"+listActivities.get(position).getId()+"user:"+user.getId(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getContext(), InnerNavigationController.class);
+                getContext().startActivity(intent);
+            }
+        });
         //databaseHelper = new DatabaseHelper(activity);
 
         //String emailFromIntent = getIntent().getStringExtra("EMAIL");

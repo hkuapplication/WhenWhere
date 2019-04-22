@@ -29,23 +29,44 @@ public class Activity_recycle extends RecyclerView.Adapter<Activity_recycle.User
         // inflating recycler item view
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.activity_recycle, parent, false);
-        button=itemView.findViewById(R.id.imageButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(itemView.getContext(), InnerNavigationController.class);
-                itemView.getContext().startActivity(intent);
-            }
-        });
+       // button=itemView.findViewById(R.id.imageButton);
+
+       // button.setOnitemClickListener(new View.setOnitemClickListener() {
+          //  @Override
+         //   public void onClick(View v) {
+         //       Intent intent=new Intent(itemView.getContext(), InnerNavigationController.class);
+         //       itemView.getContext().startActivity(intent);
+         //   }
+      //  });
         return new UserViewHolder(itemView);
     }
     @Override
-    public void onBindViewHolder(UserViewHolder holder, int position) {
+    public void onBindViewHolder(final UserViewHolder holder, int position) {
+        final int layoutPosition = holder.getLayoutPosition ();
+        //必须在itemView的点击事件里面判断
+        holder.itemView.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+
+                if(onItemClickListener!=null){
+                    onItemClickListener.onItemClickListener (layoutPosition);
+                }
+
+            }
+        });
         holder.textViewName.setText(listActivities.get(position).getName());
         holder.textViewTime.setText(listActivities.get(position).getTime());
         holder.textViewPlace.setText(listActivities.get(position).getPlace());
     }
-
+    private OnItemClickListener onItemClickListener;
+    //创建接口
+    public interface OnItemClickListener{
+        void onItemClickListener(int position);
+    }
+    //外界调用的方法
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
     @Override
     public int getItemCount() {
         Log.v(Activity_recycle.class.getSimpleName(),""+listActivities.size());
