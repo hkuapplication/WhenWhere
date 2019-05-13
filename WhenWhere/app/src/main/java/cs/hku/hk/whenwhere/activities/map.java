@@ -277,7 +277,7 @@ public class map extends AppCompatActivity implements GoogleMap.OnMarkerClickLis
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String s=String.valueOf(clicked+1);
-                        Toast.makeText(map.this, "Likes" + s, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(map.this, "❤️", Toast.LENGTH_SHORT).show();
                         //marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.pin));
                         marker.setTag(2);
                         //向数据库中设置点赞值为clicked+1
